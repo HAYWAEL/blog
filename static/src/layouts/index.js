@@ -8,16 +8,17 @@ const MenuItemGroup = Menu.ItemGroup;
 
 export default function(props) {
     return (
-      <Layout>
-    <Header style={{ position: 'fixed', width: '100%' ,background:'#fff'}}>
+      <Layout style={{background:'#fff'}}>
+    <Header style={{ position: 'fixed', width: '100%' ,background:'#fff',zIndex:20,padding:'0 100px',maxWidth:1000}}>
       <div className={styles.logo} >HAYWAEL</div>
       <Menu
         theme="light"
         mode="horizontal"
-        defaultSelectedKeys={['2']}
-        style={{ lineHeight: '64px' }}
+        defaultSelectedKeys={['1']}
+        style={{ lineHeight: '64px',border:'none' }}
+        
       >
-        <SubMenu title={<span><Icon type="code-o" />技术</span>}>
+        <SubMenu title={<span><Icon type="code-o" />技术</span>} >
           <MenuItemGroup title="WEB">
             <Menu.Item key="setting:1">JavaScript</Menu.Item>
             <Menu.Item key="setting:2">Node</Menu.Item>
@@ -38,7 +39,7 @@ export default function(props) {
         
       </Menu>
     </Header>
-    <Content style={{ padding: '0 50px', marginTop: 64 }}>
+    <Content style={{ padding: '0', marginTop: 64 ,background:'#f6f9fc'}}>
       
       {
         props.children
